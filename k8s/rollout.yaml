@@ -10,7 +10,7 @@ spec:
       activeService: bluegreen-active
       previewService: bluegreen-preview
       autoPromotionEnabled: false
-      scaleDownDelaySeconds: 30
+      scaleDownDelaySeconds: 900
   selector:
     matchLabels:
       app: bluegreen-demo
@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
         - name: app
-          image: nginx:1.25
+          image: nginx:1.28.2
           ports:
             - containerPort: 80
